@@ -64,20 +64,19 @@ func (m *mkcert) makeCert(hosts []string) {
 	certOrgUnit := userAndHostname
 	certCommonName := hosts[0]
 
+	if m.certCommonName != "" {
+		certCommonName = m.certCommonName
+	}
 	if m.certOrg != "" {
 		certOrg = m.certOrg
 	}
 	if m.certOrgUnit != "" {
 		certOrgUnit = m.certOrgUnit
 	}
-	if m.certCommonName != "" {
-		certCommonName = m.certCommonName
-	}
-
 	tpl := &x509.Certificate{
 		SerialNumber: randomSerialNumber(),
 		Subject: pkix.Name{
-			Organization:       []string{"certOrg"},
+			Organization:       []string{certOrg},
 			OrganizationalUnit: []string{certOrgUnit},
 			CommonName:         certCommonName,
 		},

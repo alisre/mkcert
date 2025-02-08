@@ -152,7 +152,8 @@ To only install the local root CA into a subset of them, you can set the `TRUST_
 #### Example
 
 ```
-mkcert -key-file key.pem -cert-file cert.pem example.com *.example.com
+mkcert -install -ca-org="Cloudflare CA" -ca-orgUnit="Cloudflare" -ca-commonName="Cloudflare Root CA 2024" -ca-years=20
+mkcert -key-file key.pem -cert-file cert.pem -cert-org="Cloudflare" -cert-orgUnit="Cloudflare Devops" -cert-commonName="Cloudflare Application Cert" -cert-days=7300 localhost 127.0.0.1 ::1 192.168.51.88 example.com *.example.com
 ```
 
 ### S/MIME
