@@ -145,6 +145,30 @@ To only install the local root CA into a subset of them, you can set the `TRUST_
 	-csr CSR
 	    Generate a certificate based on the supplied CSR. Conflicts with
 	    all other flags and arguments except -install and -cert-file.
+        
+    -cert-org 
+	    The cert Organization Name (eg, company)
+
+	-cert-orgUnit
+	    The cert Organizational Unit Name (eg, section)
+
+	-cert-commonName
+        The cert Common Name (e.g. server FQDN or YOUR name)
+	
+	-cert-days
+        The cert expire days (eg,365)
+
+	-ca-org
+        CA Organization Name (eg, company)
+
+	-ca-orgUnit
+	    The CA Organizational Unit Name (eg, section)
+
+	-ca-commonName
+	    The CA Common Name (e.g. server FQDN or YOUR name)
+
+	-ca-years
+	    The cert expire days (eg,10)
 ```
 
 > **Note:** You _must_ place these options before the domain names list.

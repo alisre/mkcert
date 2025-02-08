@@ -69,21 +69,29 @@ const advancedUsage = `Advanced options:
 	    Print the CA certificate and key storage location.
 	
 	-cert-org 
+	    The cert Organization Name (eg, company)
 
 	-cert-orgUnit
+	    The cert Organizational Unit Name (eg, section)
 
 	-cert-commonName
-
+        The cert Common Name (e.g. server FQDN or YOUR name)
+	
 	-cert-days
+        The cert expire days (eg,365)
 
 	-ca-org
+        CA Organization Name (eg, company)
 
 	-ca-orgUnit
+	    The CA Organizational Unit Name (eg, section)
 
 	-ca-commonName
+	    The CA Common Name (e.g. server FQDN or YOUR name)
 
 	-ca-years
-	
+	    The cert expire days (eg,10)
+		
 	$CAROOT (environment variable)
 	    Set the CA certificate and key storage location. (This allows
 	    maintaining multiple local CAs in parallel.)
